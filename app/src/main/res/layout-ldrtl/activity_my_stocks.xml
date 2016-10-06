@@ -1,0 +1,71 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout">
+
+  <LinearLayout
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_gravity="center"
+      android:visibility="gone"
+      android:id="@+id/noConnection">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_cloud_white_124dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/network_toast"/>
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_gravity="center"
+      android:id="@+id/noStocks"
+      android:visibility="gone">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_money_off_white_124dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:text="@string/stocks_absent"/>
+  </LinearLayout>
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/recycler_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      />
+
+  <android.support.design.widget.FloatingActionButton
+      android:id="@+id/fab"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|left"
+      android:layout_margin="16dp"
+      android:src="@drawable/ic_add_white_24dp"
+      app:layout_anchor="@id/recycler_view"
+      app:layout_anchorGravity="bottom|end"
+      app:backgroundTint="@color/material_vibrant_red"
+      app:rippleColor="#FFF"
+      app:elevation="6dp"
+      />
+
+</android.support.design.widget.CoordinatorLayout>
+
+
